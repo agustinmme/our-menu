@@ -18,6 +18,6 @@ function Menu({title,price,img,desc}) {
         </Stack>
         </SimpleGrid> 
     )
-}
+} 
 
 export default Menu

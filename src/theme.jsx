@@ -10,7 +10,7 @@ export default extendTheme({
           base: 0,
           md: 4,
         },
-      },
+      }, 
     }),
   }
 });
