@@ -1,19 +1,20 @@
 import React from 'react'
 import { Heading,Stack, Spacer,Flex,Text,Divider,Image,Box,SimpleGrid } from "@chakra-ui/react"
-function Menu() {
+function Menu({title,price,img,desc}) {
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
     return (
         <SimpleGrid columns={{ base: 1, lg: 2 }} >
-        <Box maxW="xs" borderWidth="1px" borderRadius="lg" overflow="hidden">
-        <Image src={"https://bit.ly/2Z4KKcF"} alt={"property.imageAlt"} />
-        </Box>
+        <Image  boxSize="300px" src={img} borderRadius="lg" alt={"property.imageAlt"} />
         <Stack maxW="sm">
         <Flex align="center">
-            <Heading as="h5" size="xs">Soy un menu</Heading>
+            <Heading as="h5" size="xs" color={"#102a42"}>{capitalizeFirstLetter(title)}</Heading>
             <Spacer/>
-            <Text>$10</Text>
+            <Text fontWeight="bold" color={"#c59d5f"} >${price}</Text>
           </Flex>
-          <Divider  colorScheme={"blue"}/>
-          <Text >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deleniti tempore cumque doloremque! Consectetur at, tempora corporis nulla repudiandae laborum culpa molestiae ullam, doloribus veniam, dicta neque in autem facilis!</Text>
+          <hr  color="#777da4"/>
+          <Text color={"#777da4"}>{desc}</Text>
         </Stack>
         </SimpleGrid> 
     )
